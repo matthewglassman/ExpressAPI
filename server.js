@@ -18,3 +18,11 @@ app.use(errorhandler())
 app.get('/accounts', (req, res) => {
   res.status(200).send(store.accounts)
 })
+
+//POST route to accounts. Response contains ID of new account and 201 status
+app.post('/accounts', (req, res) => {
+  let newAccount = req.body
+  let id = store.accounts.length
+  store.accounts.push(newAccount)
+  res.status(201).send({id: id})
+})
