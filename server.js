@@ -26,3 +26,9 @@ app.post('/accounts', (req, res) => {
   store.accounts.push(newAccount)
   res.status(201).send({id: id})
 })
+
+//PUT route to pull ID to be updated using URL Paramaters
+app.put('/accounts/:id', (req, res) => {
+  store.accounts[req.params.id] = req.body
+  res.status(200).send(store.accounts[req.params.id])
+})
