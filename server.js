@@ -10,7 +10,7 @@ store.accounts = []
 let app = express()
 
 app.use(bodyParser.json())
-app.user(logger('dev'))
+app.use(logger('dev'))
 app.use(errorhandler())
 
 //GET route to /accounts which will send entire accounts array back to client
