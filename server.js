@@ -35,7 +35,7 @@ app.put('/accounts/:id', (req, res) => {
 
 //DELETE route. This will use splice to remove an item indicated using params
 app.delete('/accounts/:id', (req, res) => {
-  store.accounts.splice[req.params.id, 1)
+  store.accounts.splice[req.params.id, 1]
   res.status(204).send()
 })
 
