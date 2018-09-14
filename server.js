@@ -38,3 +38,6 @@ app.delete('/accounts/:id', (req, res) => {
   store.accounts.splice[req.params.id, 1)
   res.status(204).send()
 })
+
+//Which port should the application be listening on
+app.listen(3000)
